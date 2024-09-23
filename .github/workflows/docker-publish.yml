@@ -25,13 +25,14 @@ env:
 jobs:
 
   integration:
-    uses: ./.github/workflows/python-ci-workflow.yml
+    uses: s-j-pinto/gitactions-cicd-container-images/.github/workflows/python-ci-workflow.yml@main
     permissions:
       contents: read
       packages: write
       
   build:
     needs: [integration]
+    
     runs-on: ubuntu-latest
     permissions:
       contents: read
